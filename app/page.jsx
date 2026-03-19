@@ -300,37 +300,39 @@ export default function HomePage() {
               <strong>{personalBestDisplay}</strong>
             </div>
           </div>
-          <div className="control-group">
-            <p className="label">Difficulty</p>
-            <div className="button-row">
+          <fieldset className="control-group">
+            <legend className="label">Difficulty</legend>
+            <div className="button-row" role="radiogroup" aria-label="Difficulty level">
               {DIFFICULTIES.map((level) => (
                 <button
                   key={level.id}
                   type="button"
                   className={`pill-button ${difficulty === level.id ? 'active' : ''}`}
+                  aria-pressed={difficulty === level.id}
                   onClick={() => handleDifficultyChange(level.id)}
                 >
                   {level.label}
                 </button>
               ))}
             </div>
-          </div>
-          <div className="control-group">
-            <p className="label">Mode</p>
-            <div className="button-row">
+          </fieldset>
+          <fieldset className="control-group">
+            <legend className="label">Mode</legend>
+            <div className="button-row" role="radiogroup" aria-label="Test mode">
               {MODES.map((selection) => (
                 <button
                   key={selection.id}
                   type="button"
                   className={`pill-button ${mode === selection.id ? 'active mode' : ''}`}
+                  aria-pressed={mode === selection.id}
                   onClick={() => handleModeChange(selection.id)}
                 >
                   {selection.label}
                 </button>
               ))}
             </div>
-          </div>
-          <div className="stat-grid">
+          </fieldset>
+          <div className="stat-grid" aria-live="polite" aria-atomic="true">
             <article>
               <p className="stat-label">WPM</p>
               <p className="stat-value">{displayedWpm}</p>
@@ -366,6 +368,7 @@ export default function HomePage() {
             tabIndex={0}
             role="textbox"
             aria-label="Typing area"
+            aria-multiline="true"
             className="passage-wrapper"
             onClick={focusTypingArea}
             onKeyDown={handleKeyDown}
