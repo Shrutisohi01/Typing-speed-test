@@ -1,0 +1,3 @@
+module.exports=[50928,a=>{a.v({className:"sora_baba1ada-module__H_S8Ha__className"})},98421,a=>{"use strict";var b=a.i(7997),c=a.i(50928);let d={className:c.default.className,style:{fontFamily:"'Sora', 'Sora Fallback'",fontStyle:"normal"}};function e({children:a}){return(0,b.jsx)("html",{lang:"en",children:(0,b.jsx)("body",{className:d.className,children:a})})}null!=c.default.variable&&(d.variable=c.default.variable),a.s(["default",()=>e,"metadata",0,{title:"Typing Speed Test",description:"A responsive typing speed test with timed and passage modes, results, and persistence."}],98421)}];
+
+//# sourceMappingURL=%5Broot-of-the-server%5D__9aae3a27._.js.map
